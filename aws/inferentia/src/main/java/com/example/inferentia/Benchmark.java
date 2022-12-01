@@ -106,7 +106,7 @@ public class Benchmark {
             }
             long duration = System.currentTimeMillis() - begin;
             if (metrics != null) {
-                metrics.addMetric("duration", duration, "mills");
+                metrics.addMetric("duration", duration);
             }
         }
     }
@@ -133,7 +133,7 @@ public class Benchmark {
                 logger.error("", e);
             }
             long duration = System.currentTimeMillis() - begin;
-            metrics.addMetric("duration", duration, "mills");
+            metrics.addMetric("duration", duration);
 
             for (PredictorCallable callable : callables) {
                 callable.close();
